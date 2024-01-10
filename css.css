@@ -1,0 +1,91 @@
+/*a partir de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+
+/*header et nav*/
+/*base*/
+* {
+    /*simplifie la gestion des tailles d'éléments*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /*permettra à la page de dérouler en douceur jusqu'à une section donnée*/
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: .938rem;
+    background-color: aliceblue;
+    color: rgb(211, 150, 75);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: black;
+    font-weight: 700;
+}
+
+ul {
+    /*supprime les puces*/
+    list-style: none;
+}
+
+a {
+    /*supprime les sourligner des lien*/
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    /*déterminer l'ordre de superposition des element*/
+    /* si elem à le plus grand z-index apparait au debut de la page */
+    z-index: 100;
+    /*modification d'ombre sera animée sur une durée de 0,4 seconde*/
+    transition: box-shadow .4s;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.nav {
+    position: relative;
+    /*unité relative à la taile du navigateur par defaut 16px */
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: black;
+    /*espace entre les colone du display */
+    column-gap: .5rem;
+}
+
+.nav_logo_circle,
+.nav_toggle {
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    color: beige;
+    display: grid;
+    /*utiliser si display est grille pour mettre lelement au milieu*/
+    place-items: center;
+}
+
+/*align-items: center; aligne le contenu des cellules de la grille verticalement*/
+/*justify-items: center; justifie le contenu des cellules horizontalement au centre de la cellule de la grille.*/
